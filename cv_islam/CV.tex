@@ -1,0 +1,657 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("CV.tex")
+%% TeX ---(XeLaTeX)---> PDF:
+%%
+%% Method 1: Use latexmk for fully automated document generation:
+%%   latexmk -xelatex "CV.tex"
+%%   (add the -pvc switch to automatically recompile on changes)
+%%
+%% Method 2: Use XeLaTeX directly:
+%%   xelatex "CV.tex"
+%%   (run multiple times to resolve cross-references if needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,MMMyyyy,nonstop]{simpleresumecv}
+% Class options:
+% a4paper, letterpapesr, draft, nonstop
+% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+\usepackage[utf8]{inputenc}  % assumes input is utf8 encoded
+%\usepackage[T1]{fontenc}
+%\usepackage[turkish]{babel}
+\usepackage{listings}
+\usepackage{import} %\nonstopmode
+\usepackage{makeidx}
+\usepackage{appendix}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{hyperref} 
+\usepackage{xeCJK}
+\usepackage{xunicode}
+\usepackage[babelshorthands]{polyglossia}
+%\setotherlanguages{turkish}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Islam Mansour}
+\newcommand{\CVTitle}{Islam Mansour's CV for the University of Stuttgart}
+\newcommand{\CVNote}{CV compiled on {\today} for T\"{U}B\.{I}TAK}
+\newcommand{\CVWebpage}{http://web.itu.edu.tr/\textasciitilde mansour/}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\title{\CVAuthor}
+
+\begin{subtitle}
+\href{https://www.google.com.tr/maps/place/ITU+Ucak+ve+Uzay+Bilimleri+Fakultesi/}
+{Vadi Yurt, D Blok 225/2, {\.I}T{\"{U}} Ayazaga Campus, Maslak, ISTANBUL 34469, Turkey}
+\par
+\href{mailto:mansour@itu.edu.tr}
+{mansour@itu.edu.tr}
+\,\SubBulletSymbol\,
+Skype: islam.alam.m
+\,\SubBulletSymbol\,
++90\,553\,000\,7301
+\,\SubBulletSymbol\,
+\href{\CVWebpage}
+{\CVWebpage}
+\end{subtitle}
+
+\begin{body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\section
+{Education}
+{Education}
+{PDF:Education}
+
+\href{http://www.itu.edu.tr/en/}
+{\textbf{Istanbul Technical University}},
+Istanbul, Turkey 
+
+\GapNoBreak
+\BulletItem
+Bachelor of Science (B.S.) in
+\href{http://www.uubf.itu.edu.tr/}
+{Astronautical Engineering}
+\hfill
+\DatestampYMD{2014}{09}{25} --
+expected \DatestampYMD{2017}{02}{05}
+\begin{detail}
+\SubBulletItem
+\href{http://www.sis.itu.edu.tr/eng/curriculums/plan/UZBE/201110.html} {Relevant Coursework:} 
+\href{http://ssb.sis.itu.edu.tr:9000/pls/PROD/itu_icerik.p_download?file=UZB422E}
+{Spacecraft Systems Design,}
+\href{http://ssb.sis.itu.edu.tr:9000/pls/PROD/itu_icerik.p_download?file=UCK362E}
+{Automatic Control,}
+\href{http://ssb.sis.itu.edu.tr:9000/pls/PROD/itu_icerik.p_download?file=UZB421E} 
+{Attitude Determination and Control,}
+\href{http://ssb.sis.itu.edu.tr:9000/pls/PROD/itu_icerik.p_download?file=UZB352E}
+{Orbital Mechanics, }
+\href{http://ssb.sis.itu.edu.tr:9000/pls/PROD/itu_icerik.p_download?file=UCK226E} 
+{Structural and Mechanical Vibration.}
+\SubBulletItem
+Honor List.
+\SubBulletItem
+Cumulative GPA: 3.40 / 4.00
+\end{detail}
+
+
+
+\BigGap
+\href{https://www.vutbr.cz/en/}
+{\textbf{Brno University of Technology}},
+Brno, Czech Republic
+
+\GapNoBreak
+\BulletItem
+Erasmus+ Exchange Programme
+\href{https://www.fme.vutbr.cz/index.html?lang=1}
+{ }
+\hfill
+\DatestampYMD{2015}{09}{25} --
+\DatestampYMD{2016}{02}{05}
+\begin{detail}
+\SubBulletItem
+Cumulative GPA: 3.69 / 4.00
+\end{detail}
+
+\BigGap
+\href{http://cu.edu.eg/Home}
+{\textbf{Cairo University}},
+Cairo, Egypt
+
+\GapNoBreak
+\BulletItem
+\href{http://eng.cu.edu.eg/en/}
+Undergraduate Student
+(transferred to Istanbul Technical University)
+\hfill
+\DatestampYMD{2011}{09}{16} --
+\DatestampYMD{2014}{06}{28}
+\begin{detail}
+\SubBulletItem
+Cumulative GPA: 3.32 / 4.00
+\end{detail}
+
+\BigGap
+{\textbf{Industrial Technical Institute Matria}},
+Cairo, Egypt
+
+\GapNoBreak
+\BulletItem
+Diploma of Associate Engineering (D.A.E) in Building and Construction
+\hfill
+\DatestampYMD{2009}{09}{16} --
+\DatestampYMD{2011}{06}{28}
+\begin{detail}
+\SubBulletItem
+General Grade: Excellent (24-Courses)
+\SubBulletItem
+Percentage: 95.77\%
+\end{detail}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RESEARCH EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Research Experience}
+{Research Experience}
+{PDF:ResearchExperience}
+
+
+\textbf{Spacecraft Systems Design},
+Istanbul Technical University
+
+\GapNoBreak
+\BulletItem	
+Undergraduate Research Student, Aerospace Engineering Department
+\hfill
+\DatestampYMD{2016}{2}{08} --
+Present 
+\begin{detail}
+\SubBulletItem
+Project:
+Designing a Virtual Reality Cube-Sat.
+\SubBulletItem
+Supervisor:
+Prof. Dr. Alim R\"ustem ASLAN
+\SubBulletItem
+Focus: System Engineering, Attitude Determination, Spacecraft Design.
+\end{detail}
+
+
+%%%%%%%%%%%%%
+\href{https://www.linkedin.com/company/space-systems-technology-laboratory}
+{\textbf{Space Systems Technology Laboratory (SSTL)}},
+Cairo University
+\GapNoBreak
+\BulletItem	
+Undergraduate Research Student, Aerospace Engineering Department
+\hfill
+\DatestampYMD{2012}{12}{15} --
+\DatestampYMD{2014}{07}{15}
+\begin{detail}
+\SubBulletItem
+Project: Control \& Design of Can-SAT, ROVER, Quad-copter, Rocket.
+\SubBulletItem
+Supervisors:
+Prof. Dr. Mohammed Khalil Ibrahim
+\SubBulletItem
+Focus:
+Can-Satellite, Quad-copter, ROVER, Rocket, Embedded Systems.
+\end{detail}
+
+%%%%%%%%%%%%%%%%
+\href{http://aer.eng.cu.edu.eg/resources/aeronautical-systems-technology-laboratory/}
+{\textbf{Aeronautical System Technology Lab (ASTL)}},
+Cairo University
+\GapNoBreak
+\BulletItem	
+Summer Intern, Aerospace Engineering Department
+\hfill
+\DatestampYMD{2013}{06}{15} --
+\DatestampYMD{2013}{09}{15}
+\begin{detail}
+\SubBulletItem
+Project:
+Additive Manufacturing Trends in Aerospace and RC Flight Training
+\SubBulletItem
+Focus: RC Flight Training, CNC Machine, Laser Cutting Machine, Composite Forming Techniques.
+\end{detail}
+
+%%%%%%%%%%%%%
+\href{http://udc2012.wix.com/udc}
+{\textbf{Unmanned Aerial Systems Development Center (UDC)}},
+Cairo University
+\GapNoBreak
+\BulletItem	
+Student Participant, Aerospace Engineering Department
+\hfill
+\DatestampYMD{2012}{11}{15} --
+\DatestampYMD{2013}{04}{15}
+\begin{detail}
+\SubBulletItem
+Project:
+Fabrication \& Flight Testing of an RC Aircraft
+\SubBulletItem
+Focus:
+A simulated Remote Control, RC Aircraft.
+\end{detail}
+
+
+
+%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS %%
+%%%%%%%%%%%%%%%%%%
+
+%\section
+%{Projects}
+%{Projects}
+%{PDF:Projects}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% AWARDS & SCHOLARSHIPS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Awards \&\newline
+Scholarships}
+{Awards \& Scholarships}
+{PDF:AwardsAndScholarships}
+
+\BulletItem
+Erasmus+ Scholarship,
+Istanbul Technical University
+\hfill
+\DatestampYMD{2015}{09}{25} --
+\DatestampYMD{2016}{02}{05}
+\begin{detail}
+\SubItem
+For attaining a high GPA \& English language exam.
+\end{detail}
+
+\Gap
+\BulletItem
+Participation of University Rover Challenge 2014,
+Ranked 9th, Mars Society, USA
+\hfill
+\DatestampYMD{2014}{05}{10}
+
+\begin{detail}
+\SubItem
+Design and build the next generation of Mars rovers that will one day work alongside human space exploration.
+\end{detail}
+
+\Gap
+\BulletItem
+Third Iran Cansat Competition, Ranked 7th
+\hfill
+\DatestampY{2013}
+\newline
+Astronautics Research Institute of the Iranian Space Research Center, Iran
+\begin{detail}
+\SubItem
+Atmospheric Sounding Mission Category. 
+\end{detail}
+
+\Gap
+\BulletItem
+Certificate of Appreciation, American University in Cairo, Egypt
+\hfill
+\DatestampY{2012}
+\begin{detail}
+\SubItem
+For the Distinguished Efforts in the Third Annual Cairo Science Festival. 
+\end{detail}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROFESSIONAL AFFILIATIONS & ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Professional Affiliations\newline
+\& Activities}
+{Professional Affiliations \& Activities}
+{PDF:ProfessionalAffiliationsActivities}
+
+\href{https://www.aiaa.org/}
+{\textbf{The American Institute of Aeronautics and Astronautics (AIAA)}}
+\GapNoBreak
+\BulletItem
+Member
+\hfill
+\DatestampY{2015} --
+Present
+
+\Gap
+\href{http://www.spacegeneration.org/}
+{\textbf{The Space Generation Advisory Council (SGAC)}}
+\GapNoBreak
+\BulletItem
+Member
+\hfill
+\DatestampY{2015} --
+Present
+
+\Gap
+\href{https://www.facebook.com/The-Astronomical-Society-of-Mahmoud-Mosque-ASMM-217726498294228/}
+{\textbf{The Astronomical Society of Mahmoud Mosque (ASMM)}}, Giza, Egypt
+\GapNoBreak
+\BulletItem
+Member
+\hfill
+\DatestampY{2009} --
+\DatestampY{2015}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% CAMPUS ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Campus Activities}
+{Campus Activities}
+{PDF:CampusActivities}
+
+%%%%%%%%%%%%%
+
+\href{https://www.facebook.com/iturokettakimi}
+{\textbf{{\.I}T{\"{U}} Rocket Team}},
+Istanbul Technical University
+
+\GapNoBreak
+\BulletItem	
+Undergraduate Research Student, Aerospace Engineering Department
+\hfill
+\DatestampYMD{2016}{2}{15} --
+Present 
+\begin{detail}
+\SubBulletItem
+Project:
+Designing a Solid Rocket for the Intercollegiate Engineering Competition.
+\SubBulletItem
+Focus: Rocket, Design, Control Unit.
+\end{detail}
+
+\href{http://schools.aucegypt.edu/news/aucinthenews/Pages/3rdScienceFestival.aspx}
+{\textbf{Science Communication}},
+American University in Cairo, Egypt
+
+\GapNoBreak
+\BulletItem
+Volunteer 
+\hfill
+\DatestampYMD{2011}{11}{15} --
+\DatestampYMD{2012}{08}{15}
+\begin{detail}
+\SubBulletItem
+Participate in events such as Family Science, Star Gazing, Cairo Science Festival.
+\end{detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OTHER WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Other Work\newline
+Experience}
+{Other Work Experience}
+{PDF:OtherWorkExperience}
+
+\href{https://www.facebook.com/kvectorfoundation}
+{\textbf{K vector Foundation}},
+Cairo university, Egypt
+
+\GapNoBreak
+\BulletItem
+CEO,
+Academic Division Head
+\hfill
+\DatestampYMD{2011}{12}{15} --
+\DatestampYMD{2012}{08}{15}
+\begin{detail}
+\SubBulletItem
+The aim to build a total Egyptian car\textquotesingle s factory.
+\SubBulletItem
+Providing workshops for engineering students to polish their experience.
+\end{detail}
+
+%%%%%%%%%%%%%%%
+%% LANGUAGES %%
+%%%%%%%%%%%%%%%
+
+\section
+{Languages}
+{Languages}
+{PDF:Languages}
+
+\BulletItem
+Arabic: Native language.
+
+\GapNoBreak
+\BulletItem
+English: Fluent (speaking, reading, writing).
+
+\GapNoBreak
+\BulletItem
+Turkish: Intermediate (reading); basic (speaking, writing).
+
+%%%%%%%%%%%%%%%%%%%%%
+%% COMPUTER SKILLS %%
+%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Computer skills}
+{Computer skills}
+{PDF:Computer Skills}
+\BulletItem
+Programming
+
+\quad
+\begin{tabular}{l l l l}
+Matlab: Proficient & C/C++: Intermediate & LabVIEW: Basic & Mathematica: Basic\\
+C\#: Basic & Python: Basic & µC Programming: Basic\\
+\end{tabular}
+
+\BulletItem
+Web design
+
+\quad
+\begin{tabular}{l l l l}
+HTML: Intermediate & Adobe Dreamweaver: Intermediate
+\end{tabular}
+
+\BulletItem
+Finite element  analysis
+
+\quad
+\begin{tabular}{l l l l}
+ANSYS Mechanical APDL
+\end{tabular}
+\BulletItem
+Aerospace
+
+\quad
+\begin{tabular}{l l l l}
+{Basic knowledge of XFOIL, Java Astrodynamics Toolkit, Systems Tool Kit (STK)}
+\end{tabular}
+
+\BulletItem
+Software
+
+\quad
+\begin{tabular}{l l l l l l l}
+{\TeX} & {\XeLaTeX} & Microsoft Office & Adobe Photoshop & Adobe Acrobat Pro\\ 
+AutoCAD & SolidWorks & CATIA & Adobe Illustrator & CorelDRAW\\
+\end{tabular}
+
+\BulletItem
+Operating system
+
+\quad
+\begin{tabular}{l l l l}
+Linux: Ubuntu \& Mint & Windows: 10
+\end{tabular}
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\section
+{Skills}
+{Skills}
+{PDF:Skills}
+Self-learning (Software Defined Radio, Designing PCBs, SMD soldering), Teamwork, Management, Creativity, Critical Thinking, Work Hard Under Pressure, Analytical Thinking, Flexibility. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Research INTERESTS %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Research Interests}
+{Research Interests}
+{PDF:Research Interests}
+
+System Engineering,
+Control Engineering,
+Spacecraft Design,
+Fluid Mechanics,
+Robotics and Control,
+Signal Processing.
+
+
+%%%%%%%%%%%%%%%
+%% INTERESTS %%
+%%%%%%%%%%%%%%%
+
+\section
+{Interests}
+{Interests}
+{PDF:Interests}
+
+Amateur Astronomy,
+Amateur Radio, 
+Digital photography,
+Radio Astronomy,
+swimming.
+
+%%%%%%%%%%%%%%%%
+%% REFERENCES %%
+%%%%%%%%%%%%%%%%
+
+\section
+{References}
+{References}
+{PDF:References}
+
+\BulletItem
+\href{http://www.faa.itu.edu.tr/Icerik.aspx?sid=4688}
+{\textbf{Prof. Dr. Alim R\"ustem ASLAN}}
+\newline
+Professor \& Head of Space Systems Design and Test Laboratory
+\newline
+Istanbul Technical University
+\newline
+Faculty of Aeronautics and Astronautics, ISTANBUL 34469, Turkey
+\newline
+\href{mailto:aslanr@itu.edu.tr}
+{aslanr@itu.edu.tr}
+\,\SubBulletSymbol\,
++90\,212\,285 7189/136
+
+\BigGap
+\BulletItem
+\href{http://scholar.cu.edu.eg/?q=mkhalil/}
+{\textbf{Prof. Dr. Mohammed Khalil Ibrahim}}
+\newline
+Professor \& Head of Aerodynamics Group
+\newline
+Cairo University
+\newline
+Faculty of Engineering, Aerospace Engineering Dept., Cairo University, Giza 12613, Egypt
+\newline
+\href{mailto:mkhalil@cu.edu.eg}
+{mkhalil@cu.edu.eg}
+\,\SubBulletSymbol\,
++966\,56\,308 5093 
+\end{body}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SECTION WITH USAGE EXAMPLES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Change the date format option passed to the document class to adjust how dates are displayed throughout the document:
+% MMMyyyy (``Dec~2010''),
+% ddMMMyyyy (``31~Dec~2010''),
+% MMMMyyyy (``December~2010''),
+% ddMMMMyyyy (``31~December~2010''),
+% yyyyMMdd (``2010-12-31''),
+% yyyyMM (``2010-12''),
+% yyyy (``2010'').
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MULTILINGUAL UNICODE EXAMPLES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+\UseNoteFont% \null
+\hfill%
+[\textit{\CVNote}]%
+%\hspace{2.0mm}\null
+\end{document}
